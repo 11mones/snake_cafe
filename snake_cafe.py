@@ -34,3 +34,35 @@ print("Drinks")
 print("-------")
 for x in Drinks:
   print(x)
+
+
+print("""
+***********************************
+** What would you like to order? **
+***********************************
+""")
+countList = []      
+y = input(">")
+countList.append(y)
+# u = y.lower()
+
+while (y.lower() != "quit"):
+
+
+    if y.capitalize() in Appetizers:
+      print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")
+    elif y.capitalize() in Entrees:
+        print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")
+    elif y.capitalize() in Desserts:
+        print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")
+    elif y.capitalize() in Drinks:
+        print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")       
+    else :
+      print("Sorry, we do not have this in the menu")  
+    y = input(">")
+    countList.append(y)
+    
+
+print("Thanks for using our app")
+
+    
