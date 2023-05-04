@@ -42,25 +42,26 @@ print("""
 ***********************************
 """)
 countList = []      
-y = input(">")
+y= input(">")
+y.lower()
 countList.append(y)
 # u = y.lower()
 
-while (y.lower() != "quit"):
+while (y != "quit"):
 
 
     if y.capitalize() in Appetizers:
-      print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")
+      print("**",countList.count(y.lower())+ countList.count(y.capitalize())," order of",y.capitalize(),"has been added to your meal**")
     elif y.capitalize() in Entrees:
-        print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")
+        print("**",countList.count(y.lower())+ countList.count(y.capitalize())," order of",y.capitalize(),"has been added to your meal**")
     elif y.capitalize() in Desserts:
-        print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")
+        print("**",countList.count(y.lower())+ countList.count(y.capitalize())," order of",y.capitalize(),"has been added to your meal**")
     elif y.capitalize() in Drinks:
-        print("**",countList.count(y)," order of",y.capitalize(),"has been added to your meal**")       
+        print("**",countList.count(y.lower())+ countList.count(y.capitalize())," order of",y.capitalize(),"has been added to your meal**")       
     else :
       print("Sorry, we do not have this in the menu")  
     y = input(">")
-    countList.append(y)
+    countList.append(y.lower())
     
 
 print("Thanks for using our app")
